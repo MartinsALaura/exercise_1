@@ -56,9 +56,8 @@ public class Livro{
     }
 
     public void imprimeLivro(){
-        System.out.println("_____________________________\n");
-        System.out.println("Titulo: " + titulo + "\nAno de Publicação: " + anoPublicacao + "\nPreço: " + preco + "\nQuantidade de páginas: " + qtdPaginas);
-        System.out.println("_____________________________");
+        System.out.println("\tTitulo: " + titulo + "\n\tAno de Publicação: " + anoPublicacao + "\n\tPreço: " + preco + "\n\tQuantidade de páginas: " + qtdPaginas);
+        System.out.println("________________________________________");
     }
 
     //toString method:

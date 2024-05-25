@@ -7,7 +7,7 @@ Crie nesta classe, também, o método toString.
 public class Cliente {
     private String nome, email, senha, sexo;
     private int idade;
-    private Livro livro;
+    public Livro livro;
 
     @Override
     public String toString() {
@@ -73,7 +73,7 @@ public class Cliente {
     }
 
     public void imprimeInformacoes() {
-        System.out.println("_____________________________\n");
+        System.out.println("________________________________________\n");
         System.out.println("Nome: " + nome + "\nIdade: " + idade + "\nSexo: " + sexo + "\nEmail: " + email + "\nLivro: ");
         livro.imprimeLivro();
     }
