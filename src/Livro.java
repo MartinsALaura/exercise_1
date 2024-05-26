@@ -6,13 +6,14 @@
     Crie nesta classe, também, o método toString.*/
 
 public class Livro{
-    private String titulo;
+    private String titulo, autor;
     private int anoPublicacao, qtdPaginas;
     private double preco;
 
     //Construtor:
-    public Livro (String titulo, int anoPublicacao, double preco, int qtdPaginas) {
+    public Livro (String titulo, String autor, int anoPublicacao, double preco, int qtdPaginas) {
         this.titulo = titulo;
+        this.autor = autor;
         this.anoPublicacao = anoPublicacao;
         this.preco = preco;
         this.qtdPaginas = qtdPaginas;
@@ -25,6 +26,14 @@ public class Livro{
 
     public void setTitulo(String titulo){
         this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public int getAnoPublicacao(){
@@ -63,7 +72,8 @@ public class Livro{
     //toString method:
     @Override
     public String toString() {
-        return "Livro [titulo=" + titulo + ", anoPublicacao=" + anoPublicacao + ", qtdPaginas=" + qtdPaginas
-                + ", preco=" + preco + ", PrecoPorPagina=" + calcularPrecoPorPagina() + "]";
+        return String.format(
+            "Livro [Título = %s, Autor = %s, Publicação = %d, Preco = R$%.2f, Páginas = %d, Preço por Página = R$%.2f]",
+            this.titulo, this.autor, this.anoPublicacao, this.preco, this.qtdPaginas, this.calcularPrecoPorPagina());
     }
 }

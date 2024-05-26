@@ -7,13 +7,13 @@
 
 public class Principal {
     public static void main(String[] args) throws Exception {
-        Livro livro1 = new Livro("Livro 1", 1980, 20.5, 130);
-        Livro livro2 = new Livro("Livro 2", 2020, 30.5, 170);
-        Livro livro3 = new Livro("Livro 3", 2015, 50.5, 230);
+        Livro livro1 = new Livro("Livro 1", "Fulano de tal", 1980, 20.5, 130);
+        Livro livro2 = new Livro("Livro 2", "Fulano de tal", 2020, 30.5, 170);
+        Livro livro3 = new Livro("Livro 3", "Fulano de tal", 2015, 50.5, 230);
         
-        Cliente cliente1 = new Cliente("Cliente 1", 19, "F", "cliente1@email.com", "123", livro1);
-        Cliente cliente2 = new Cliente("Cliente 2", 56, "M", "cliente2@email.com", "123", livro2);
-        Cliente cliente3 = new Cliente("Cliente 3", 34, "F", "cliente3@email.com", "123", livro3);
+        Cliente cliente1 = new Cliente("Cliente 1", 19, 'F', "cliente1@email.com", "123", livro1);
+        Cliente cliente2 = new Cliente("Cliente 2", 56, 'M', "cliente2@email.com", "123", livro2);
+        Cliente cliente3 = new Cliente("Cliente 3", 34, 'F', "cliente3@email.com", "123", livro3);
         
         System.out.println("O cliente " + cliente1.getNome() + " está com o livro " + cliente1.livro.getTitulo() + 
                             ", e o preço por página deste livro é R$" + cliente1.livro.calcularPrecoPorPagina());

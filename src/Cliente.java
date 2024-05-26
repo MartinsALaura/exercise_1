@@ -5,7 +5,8 @@ Crie nesta classe, também, o método toString.
 */
 
 public class Cliente {
-    private String nome, email, senha, sexo;
+    private String nome, email, senha;
+    private char sexo;
     private int idade;
     public Livro livro;
 
@@ -15,7 +16,7 @@ public class Cliente {
                 + ", livro=" + livro.toString() + "]";
     }
 
-    public Cliente(String nome, int idade, String sexo, String email, String senha, Livro livro) {
+    public Cliente(String nome, int idade, char sexo, String email, String senha, Livro livro) {
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
@@ -40,11 +41,11 @@ public class Cliente {
         this.idade = idade;
     }
 
-    public String getSexo() {
+    public char getSexo() {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
+    public void setSexo(char sexo) {
         this.sexo = sexo;
     }
 
